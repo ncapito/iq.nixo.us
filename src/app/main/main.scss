@@ -1,3 +1,12 @@
+@import "../../bower_components/bourbon/dist/_bourbon.scss";
+
+section {
+  @include linear-gradient(to top, red, orange);
+    font-family: $helvetica;
+  font-size: golden-ratio(14px,  1);
+}
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
