@@ -2,10 +2,21 @@
   <h1>Time 4 Roulette!</h1>
   <p class="lead">
     <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-    Instructional text goes here....
+    Test
   </p>
 </div>
 
 <div class="row">
+  <div class="col-xs-12">
+      <h1 style="text-align:center">{{game.display()}}</h1>
+      <div ng-if='msg'>{{msg}}</div>
 
+      <div><canvas style="margin-left: auto;margin-right: auto;display: block;"id="canvas" width="600" height="600"></canvas></div>
+      <div class="gameWraper" style="text-align:center;">
+        <span class="letter" ng-repeat="item in game.letters">
+          <input style="width:20px;" class="letter-value" ng-model="item.letter" />
+        </span>
+      </div>
+      <button class="btn btn-success" ng-class="{ 'disabled' : !game.valid()}" ng-click="submit()"> Submit</button>
+  </div>
 </div>
